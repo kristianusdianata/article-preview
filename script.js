@@ -121,9 +121,9 @@ function setupRezizeAction() {
  */
 function init() {
   button = document.querySelector(".footer-container button");
-  wrapper = document.querySelector(".wrapper-menu");
+  wrapper = document.querySelector(".menu-wrapper");
   card = document.querySelector(".card");
-  links = document.querySelectorAll(".wrapper-menu a");
+  links = document.querySelectorAll(".menu-wrapper a");
 
   setuResponsiveDynamicStyle();
   setupToggleAction();

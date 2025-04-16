@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.55rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+
+  /* Margin and Padding */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 2.5rem;
+  --spacing-3xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-full: 50%;
+
+  /* Color */
+  --white: hsl(0, 0%, 100%);
+  --blue-900: hsl(217, 19%, 35%);
+  --blue-700: hsl(214, 17%, 51%);
+  --blue-500: hsl(212, 23%, 69%);
+  --blue-100: hsl(210, 46%, 95%);
+
+  /* Component */
+  --background: var(--blue-100);
+  --card: var(--white);
+  --card-foreground: var(--blue-900);
+}
+
+/* Font */
+.manrope-medium {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.manrope-bold {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Component */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  background-color: var(--blue-100);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  min-block-size: 100vh;
+  max-inline-size: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-inline-size: 25.154rem;
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin: var(--spacing-md);
+}
+
+.card .wrapper-content {
+  color: var(--card-foreground);
+  background-color: var(--card);
+}
+
+/*  
+  --------------------------------
+    Card image css
+  --------------------------------
+*/
+.card-img {
+  inline-size: 100%;
+  block-size: 15.385rem;
+  overflow: hidden;
+
+  & img {
+    block-size: 115%;
+    inline-size: 100%;
+    object-fit: cover;
+  }
+}
+/*  
+  --------------------------------
+    Card image css end here
+  --------------------------------
+*/
+
+/*  
+  --------------------------------
+    Card body css 
+  --------------------------------
+*/
+.body {
+  padding-inline: var(--spacing-2xl);
+  padding-block: var(--spacing-2xl) var(--spacing-xl);
+
+  & h1 {
+    font-size: var(--font-size-xl);
+    line-height: 1.3;
+    letter-spacing: 0.019rem;
+    margin-block-end: var(--spacing-md);
+  }
+
+  & p {
+    font-size: var(--font-size-md);
+    color: var(--blue-700);
+    line-height: 1.5;
+    letter-spacing: 0.012rem;
+  }
+}
+/*  
+  --------------------------------
+    Card body css end here
+  --------------------------------
+*/
+
+/*  
+  --------------------------------
+    Footer css
+  --------------------------------
+*/
+
+/* Style for all footer */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: var(--spacing-2xl);
+  padding-block: var(--spacing-lg);
+}
+
+/* Style for footer in card */
+.footer {
+  & address {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: var(--spacing-md);
+    align-items: center;
+  }
+
+  & address img {
+    max-inline-size: 2.692rem;
+    max-block-size: 2.692rem;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    border-radius: var(--radius-full);
+    object-fit: contain;
+  }
+
+  & address span {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: var(--font-size-md);
+  }
+
+  & address time {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: var(--font-size-md);
+    color: var(--blue-500);
+  }
+}
+
+/* Style for menu footer */
+.wrapper-menu {
+  position: absolute;
+  background-color: var(--blue-900);
+
+  /* transition on small screen */
+  &.sm-transition {
+    inline-size: 100%;
+    inset-inline: 0px;
+    inset-block-end: 0px;
+    transition: inline-size 0.25s ease-in-out;
+
+    &.hide {
+      inline-size: 0px;
+      transition: inline-size 0.25s ease-in-out;
+    }
+  }
+
+  & .footer .wrapper-link {
+    display: flex;
+    flex-direction: row;
+    block-size: 100%;
+    align-items: center;
+    column-gap: var(--spacing-md);
+    block-size: 2.692rem;
+    overflow: hidden;
+
+    & span {
+      text-transform: uppercase;
+      color: var(--blue-500);
+      font-size: var(--font-size-sm);
+      letter-spacing: var(--spacing-xs);
+    }
+
+    & ul {
+      display: flex;
+      list-style-type: none;
+      flex-direction: row;
+      column-gap: var(--spacing-md);
+    }
+
+    & ul li {
+      display: flex;
+
+      & a {
+        display: flex;
+      }
+
+      & a ion-icon {
+        font-size: 2rem;
+        color: var(--white);
+      }
+    }
+  }
+}
+/*  
+  --------------------------------
+    Footer css end here
+  --------------------------------
+*/
+
+/*  
+  --------------------------------
+    Button css
+  --------------------------------
+*/
+button {
+  border: 0px;
+  inline-size: 2.692rem;
+  block-size: 2.692rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  background-color: var(--blue-100);
+  overflow: hidden;
+  z-index: 1;
+
+  & ion-icon {
+    inline-size: 1.385rem;
+    block-size: 1.385rem;
+    color: var(--blue-700);
+  }
+
+  &.active {
+    background-color: var(--blue-700);
+
+    & ion-icon {
+      color: var(--white);
+    }
+  }
+}
+/*  
+  --------------------------------
+    Button css end here
+  --------------------------------
+*/
+
+/*  
+  --------------------------------
+  Responsive large devices
+  --------------------------------
+*/
+@media (width > 768px) {
+  .container {
+    max-inline-size: 1440px;
+  }
+
+  .card {
+    border-radius: 0px;
+    overflow: visible;
+    max-inline-size: 56.154rem;
+  }
+
+  .card .wrapper-content {
+    border-radius: var(--radius-xl);
+    color: var(--card-foreground);
+    background-color: var(--card);
+    display: grid;
+    grid-template-columns: 21.923rem auto;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  /*  
+    --------------------------------
+    Card image css
+    --------------------------------
+  */
+  .card .card-img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    block-size: 100%;
+
+    & img {
+      inline-size: 123%;
+      block-size: 100%;
+    }
+  }
+  /*  
+    --------------------------------
+    Card image css end here
+    --------------------------------
+  */
+
+  /*  
+    --------------------------------
+    Card body css 
+    --------------------------------
+  */
+  .card .body {
+    grid-column: 2;
+    grid-row: 1;
+
+    & h1 {
+      font-size: var(--font-size-2xl);
+    }
+  }
+  /*
+    --------------------------------
+    Card body css end here
+    --------------------------------
+  */
+
+  /*  
+  --------------------------------
+    Footer css
+  --------------------------------
+*/
+  /* Style for all footer */
+  .footer {
+    grid-column: 2;
+    grid-row: 2;
+    padding-block: 0px var(--spacing-lg);
+  }
+
+  /* Style for menu footer */
+  .wrapper-menu {
+    border-radius: var(--radius-lg);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+    /* transition on large screen */
+    &.lg-transition {
+      transform: translateX(25%) scale(1);
+      inset-inline: auto 0px;
+      inset-block-end: 0px;
+      transition: transform 0.25s ease-in-out;
+
+      &.hide {
+        transform: translateX(27%) scale(0);
+        transition: transform 0.25s ease-in-out;
+      }
+    }
+
+    &::after {
+      content: " ";
+      inline-size: 1.154rem;
+      block-size: 1.154rem;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      background-color: var(--blue-900);
+      position: absolute;
+      inset-block-end: 0px;
+      inset-inline-start: 50%;
+      transform: translateY(88%);
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    & .footer {
+      padding-block: var(--spacing-sm);
+    }
+  }
+  /*  
+  --------------------------------
+    Footer css end here
+  --------------------------------
+*/
+}

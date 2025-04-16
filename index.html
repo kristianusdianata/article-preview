@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <main class="container">
+      <article class="card" aria-labelledby="card-title">
+        <div class="wrapper-content">
+          <div class="card-img">
+            <img src="./images/drawers.jpg" alt="Article image" />
+          </div>
+
+          <div class="body">
+            <h1 id="card-title" class="manrope-bold">
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+
+            <p class="manrope-medium">
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I&apos;ve got some simple
+              tips to help you make any room feel complete.
+            </p>
+          </div>
+
+          <div class="footer">
+            <address>
+              <img src="./images/avatar-michelle.jpg" alt="Author image" />
+              <span class="manrope-bold">Michelle Appleton</span>
+              <time datetime="2020-06-28" class="manrope-medium"
+                >28 Jun 2020</time
+              >
+            </address>
+
+            <button aria-label="Share this article">
+              <ion-icon class="btn-icon" name="arrow-redo"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="wrapper-menu lg-transition hide">
+          <div class="footer">
+            <div class="wrapper-link">
+              <span class="manrope-medium">Share</span>
+              <ul>
+                <li>
+                  <a href="#" aria-label="Share on Facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Share on Twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Share on Pinterest">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

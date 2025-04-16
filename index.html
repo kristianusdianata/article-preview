@@ -57,30 +57,43 @@
               >
             </address>
 
-            <button aria-label="Share this article">
-              <ion-icon class="btn-icon" name="arrow-redo"></ion-icon>
+            <button id="share-btn" aria-label="Share this article">
+              <ion-icon
+                class="btn-icon"
+                name="arrow-redo"
+                aria-labelledby="share-btn"
+              ></ion-icon>
             </button>
           </div>
         </div>
 
-        <div class="wrapper-menu lg-transition hide">
+        <div class="wrapper-menu lg-transition hide" aria-hidden="true">
           <div class="footer-container">
             <div class="link-container">
               <span class="manrope-medium">Share</span>
               <ul>
                 <li>
-                  <a href="#" aria-label="Share on Facebook">
-                    <ion-icon name="logo-facebook"></ion-icon>
+                  <a id="facebook" href="#" aria-label="Share on Facebook">
+                    <ion-icon
+                      name="logo-facebook"
+                      aria-labelledby="facebook"
+                    ></ion-icon>
                   </a>
                 </li>
                 <li>
-                  <a href="#" aria-label="Share on Twitter">
-                    <ion-icon name="logo-twitter"></ion-icon>
+                  <a id="twitter" href="#" aria-label="Share on Twitter">
+                    <ion-icon
+                      name="logo-twitter"
+                      aria-labelledby="twitter"
+                    ></ion-icon>
                   </a>
                 </li>
                 <li>
-                  <a href="#" aria-label="Share on Pinterest">
-                    <ion-icon name="logo-pinterest"></ion-icon>
+                  <a id="pinterest" href="#" aria-label="Share on Pinterest">
+                    <ion-icon
+                      name="logo-pinterest"
+                      aria-labelledby="pinterest"
+                    ></ion-icon>
                   </a>
                 </li>
               </ul>

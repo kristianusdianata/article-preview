@@ -88,7 +88,7 @@ body {
   margin: var(--spacing-md);
 }
 
-.card .wrapper-content {
+.card .content-wrapper {
   color: var(--card-foreground);
   background-color: var(--card);
 }
@@ -98,7 +98,7 @@ body {
     Card image css
   --------------------------------
 */
-.card-img {
+.img-container {
   inline-size: 100%;
   block-size: 15.385rem;
   overflow: hidden;
@@ -120,7 +120,7 @@ body {
     Card body css 
   --------------------------------
 */
-.body {
+.body-wrapper {
   padding-inline: var(--spacing-2xl);
   padding-block: var(--spacing-2xl) var(--spacing-xl);
 
@@ -151,7 +151,7 @@ body {
 */
 
 /* Style for all footer */
-.footer {
+.footer-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -161,7 +161,7 @@ body {
 }
 
 /* Style for footer in card */
-.footer {
+.footer-container {
   & address {
     display: grid;
     grid-template-columns: auto auto;
@@ -210,7 +210,7 @@ body {
     }
   }
 
-  & .footer .wrapper-link {
+  & .footer-container .link-container {
     display: flex;
     flex-direction: row;
     block-size: 100%;
@@ -304,7 +304,7 @@ button {
     max-inline-size: 56.154rem;
   }
 
-  .card .wrapper-content {
+  .card .content-wrapper {
     border-radius: var(--radius-xl);
     color: var(--card-foreground);
     background-color: var(--card);
@@ -319,7 +319,7 @@ button {
     Card image css
     --------------------------------
   */
-  .card .card-img {
+  .card .img-container {
     grid-column: 1;
     grid-row: 1 / span 2;
     block-size: 100%;
@@ -340,7 +340,7 @@ button {
     Card body css 
     --------------------------------
   */
-  .card .body {
+  .card .body-wrapper {
     grid-column: 2;
     grid-row: 1;
 
@@ -360,7 +360,7 @@ button {
   --------------------------------
 */
   /* Style for all footer */
-  .footer {
+  .footer-container {
     grid-column: 2;
     grid-row: 2;
     padding-block: 0px var(--spacing-lg);
@@ -399,7 +399,7 @@ button {
         rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
-    & .footer {
+    & .footer-container {
       padding-block: var(--spacing-sm);
     }
   }

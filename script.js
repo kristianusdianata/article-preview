@@ -16,6 +16,7 @@ function deactiveAction() {
   button.classList.remove("active");
   wrapper.classList.add("hide");
   wrapper.setAttribute("aria-hidden", "true");
+  wrapper.setAttribute("tabIndex", -1);
 }
 
 function toggleAction() {
@@ -24,8 +25,10 @@ function toggleAction() {
 
   if (wrapper.classList.contains("hide")) {
     wrapper.setAttribute("aria-hidden", "true");
+    wrapper.setAttribute("tabIndex", -1);
   } else {
     wrapper.setAttribute("aria-hidden", "false");
+    wrapper.setAttribute("tabIndex", 0);
   }
 }
 

@@ -103,7 +103,7 @@ function setupRezizeAction() {
  * ----------------------------------------------------
  */
 function init() {
-  button = document.querySelector(".footer button");
+  button = document.querySelector(".footer-container button");
   wrapper = document.querySelector(".wrapper-menu");
   card = document.querySelector(".card");
 

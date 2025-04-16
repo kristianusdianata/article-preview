@@ -15,11 +15,18 @@ let card = null;
 function deactiveAction() {
   button.classList.remove("active");
   wrapper.classList.add("hide");
+  wrapper.setAttribute("aria-hidden", "true");
 }
 
 function toggleAction() {
   button.classList.toggle("active");
   wrapper.classList.toggle("hide");
+
+  if (wrapper.classList.contains("hide")) {
+    wrapper.setAttribute("aria-hidden", "true");
+  } else {
+    wrapper.setAttribute("aria-hidden", "false");
+  }
 }
 
 function handleDocumentClick(e) {

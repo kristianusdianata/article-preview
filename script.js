@@ -6,17 +6,24 @@
 let button = null;
 let wrapper = null;
 let card = null;
+let links = null; // need to get share links to control tabIndex
 
 /**
  * ----------------------------------------------------
  * Helper function
  * ----------------------------------------------------
  */
+function setLinksTabIndex(tabIndex) {
+  links.forEach((link, _) => {
+    link.setAttribute("tabIndex", tabIndex);
+  });
+}
+
 function deactiveAction() {
   button.classList.remove("active");
   wrapper.classList.add("hide");
   wrapper.setAttribute("aria-hidden", "true");
-  wrapper.setAttribute("tabIndex", -1);
+  setLinksTabIndex(-1);
 }
 
 function toggleAction() {
@@ -25,15 +32,15 @@ function toggleAction() {
 
   if (wrapper.classList.contains("hide")) {
     wrapper.setAttribute("aria-hidden", "true");
-    wrapper.setAttribute("tabIndex", -1);
+    setLinksTabIndex(-1);
   } else {
     wrapper.setAttribute("aria-hidden", "false");
-    wrapper.setAttribute("tabIndex", 0);
+    setLinksTabIndex(0);
   }
 }
 
 function handleDocumentClick(e) {
-  if (!button && !wrapper) return;
+  if (!button && !wrapper && !links) return;
 
   const isButtonActive = button.classList.contains("active");
   const isClickOutsideButton = !button.contains(e.target);
@@ -94,7 +101,7 @@ function setuResponsiveDynamicStyle() {
 }
 
 function setupToggleAction() {
-  if (!button && !wrapper) return;
+  if (!button && !wrapper && !links) return;
 
   button.addEventListener("click", toggleAction);
 }
@@ -116,6 +123,7 @@ function init() {
   button = document.querySelector(".footer-container button");
   wrapper = document.querySelector(".wrapper-menu");
   card = document.querySelector(".card");
+  links = document.querySelectorAll(".wrapper-menu a");
 
   setuResponsiveDynamicStyle();
   setupToggleAction();

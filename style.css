@@ -198,13 +198,13 @@ body {
   background-color: var(--blue-900);
 
   /* transition on small screen */
-  &.sm-transition[aria-hidden="false"] {
+  &.sm-transition {
     inline-size: 100%;
     inset-inline: 0px;
     inset-block-end: 0px;
     transition: inline-size 0.25s ease-in-out;
 
-    &.hide[aria-hidden="true"] {
+    &.hide {
       inline-size: 0px;
       transition: inline-size 0.25s ease-in-out;
     }
@@ -373,13 +373,13 @@ button {
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     /* transition on large screen */
-    &.lg-transition[aria-hidden="false"] {
+    &.lg-transition {
       transform: translateX(25%) scale(1);
       inset-inline: auto 0px;
       inset-block-end: 0px;
       transition: transform 0.25s ease-in-out;
 
-      &.hide[aria-hidden="true"] {
+      &.hide {
         transform: translateX(27%) scale(0);
         transition: transform 0.25s ease-in-out;
       }

@@ -198,13 +198,13 @@ body {
   background-color: var(--blue-900);
 
   /* transition on small screen */
-  &.sm-transition {
+  &.sm-transition[aria-hidden="false"] {
     inline-size: 100%;
     inset-inline: 0px;
     inset-block-end: 0px;
     transition: inline-size 0.25s ease-in-out;
 
-    &.hide {
+    &.hide[aria-hidden="true"] {
       inline-size: 0px;
       transition: inline-size 0.25s ease-in-out;
     }

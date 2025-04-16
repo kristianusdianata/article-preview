@@ -373,13 +373,13 @@ button {
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     /* transition on large screen */
-    &.lg-transition {
+    &.lg-transition[aria-hidden="false"] {
       transform: translateX(25%) scale(1);
       inset-inline: auto 0px;
       inset-block-end: 0px;
       transition: transform 0.25s ease-in-out;
 
-      &.hide {
+      &.hide[aria-hidden="true"] {
         transform: translateX(27%) scale(0);
         transition: transform 0.25s ease-in-out;
       }

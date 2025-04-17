@@ -348,8 +348,8 @@ button {
     --------------------------------
   */
 
-  /* Main style footer */
-  .footer-container {
+  /* Style footer for main content */
+  .content-wrapper .footer-container {
     grid-column: 2;
     grid-row: 2;
     padding-block: 0px var(--spacing-lg);
